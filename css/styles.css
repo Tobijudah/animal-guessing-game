@@ -31,6 +31,11 @@ button {
    text-align: center;
 }
 
+button:disabled{
+   cursor: not-allowed;
+   background: #009632d7;
+}
+
 .container {
    width: 70%;
    margin: 3rem auto;
@@ -41,3 +46,6 @@ button {
    border: 2px solid #009632;
 }
 
+.bad {
+   border: 2px solid #db1414;
+}
