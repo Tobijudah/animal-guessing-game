@@ -44,3 +44,13 @@ const database = [
 	},
 ];
 
+const init = () => {
+	score = 0;
+	currentQuestion = 0;
+	chances = 3;
+	displayQuestion();
+};
+
+
+
+init();
