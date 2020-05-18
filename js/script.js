@@ -51,6 +51,10 @@ const init = () => {
 	displayQuestion();
 };
 
+const displayQuestion = () => {
+	question.innerText = database[currentQuestion].question;
+	answer = database[currentQuestion].answer;
+};
 
 
 init();
