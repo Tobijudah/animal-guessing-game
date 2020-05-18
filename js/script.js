@@ -1,13 +1,16 @@
-const question = document.querySelector("#question");
-const counter = document.querySelector("#counter");
-const message = document.querySelector("#error");
-const button = document.querySelector("#button");
-const scoreDisplay = document.querySelector("#score");
-const input = document.querySelector('#input')
-let score;
-let answer;
-let chances;
-let currentQuestion;
+let score,
+ 	 answer,
+ 	 chances,
+ 	 currentQuestion,
+	  answeredCorrect;
+	  
+const question = document.querySelector("#question"),
+		counter = document.querySelector("#counter"),
+		message = document.querySelector("#error"),
+		submitButton = document.querySelector("#submit"),
+		nextButton = document.querySelector("#next"),
+		scoreDisplay = document.querySelector("#score"),
+		input = document.querySelector('#input');
 
 const database = [
 	{
@@ -15,31 +18,31 @@ const database = [
 		answer: "t",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a bark sounder",
 		answer: "cat",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a mooo sounder",
 		answer: "cat",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a hiss sounder",
 		answer: "cat",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a bleat sounder",
 		answer: "cat",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a neigh sounder",
 		answer: "cat",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a oink sounder",
 		answer: "cat",
 	},
 	{
-		question: "what is a meow sounder",
+		question: "what is a cry sounder",
 		answer: "cat",
 	},
 ];
