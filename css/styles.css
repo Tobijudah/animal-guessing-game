@@ -1,0 +1,43 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html, body {
+   height: 100%;
+   font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+   font-size: 4rem;
+}
+
+a {
+   text-decoration: none;
+}
+
+button {
+   cursor: pointer;
+   display: inline-block;
+	height: 2.25rem;
+   padding: 10px 20px;
+   margin-top: 0.75rem;
+	border: 0;
+	border-radius: 0.3rem;
+	background: #009632;
+	color: white;
+	font-size: 15px;
+   text-align: center;
+}
+
+.container {
+   width: 70%;
+   margin: 3rem auto;
+   text-align: center;
+}
+
+.good {
+   border: 2px solid #009632;
+}
+
