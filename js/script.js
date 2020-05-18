@@ -109,6 +109,24 @@ const next = () => {
 }
 
 
+const showMessage = (messageContent, messageColor) => {
+	message.textContent = messageContent;
+	message.style.color = messageColor
+}
 
+const clearError = () => {
+	message.textContent = ''
+	input.classList.remove('bad')
+	input.value = ''
+}
+
+const reset = () => {
+	message.textContent = ''
+	nextButton.disabled = true
+	submitButton.disabled = false
+	input.classList.remove('good')
+	input.value = ''
+	input.disabled = false
+}
 
 init();
