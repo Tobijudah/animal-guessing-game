@@ -52,12 +52,51 @@ const init = () => {
 	currentQuestion = 0;
 	chances = 3;
 	displayQuestion();
+	checkAnswer();
 };
 
 const displayQuestion = () => {
 	question.innerText = database[currentQuestion].question;
 	answer = database[currentQuestion].answer;
 };
+
+const checkAnswer = () => {
+
+	submitButton.addEventListener('click', function(){
+
+		if (chances === 0) {
+			input.disabled = true
+			showMessage(`You've run out of chances`, 'red')
+			submitButton.disabled = true
+			nextButton.disabled = false
+			score -= 1
+			scoreDisplay.textContent = score
+		}
+
+		if (input.value === answer){
+			input.classList.remove('bad')
+			input.classList.add('good')
+			input.disabled = true
+			showMessage(`${answer} is correct. Well-done!`, 'green')
+			submitButton.disabled = true
+			nextButton.disabled = false
+			score += 5
+			scoreDisplay.textContent = score
+			// input.setAttribute.disabled = 'true'
+			answeredCorrect = true
+			currentQuestion ++
+		} 
+		else {
+			showMessage(`${input.value} is wrong. Try again`, '#db1414')
+			input.classList.add('bad')
+			chances -= 1
+			setTimeout(clearError, 3000)
+		}
+
+	})
+	
+}
+
 
 
 init();
