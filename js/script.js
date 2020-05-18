@@ -53,6 +53,7 @@ const init = () => {
 	chances = 3;
 	displayQuestion();
 	checkAnswer();
+	next()
 };
 
 const displayQuestion = () => {
@@ -96,6 +97,17 @@ const checkAnswer = () => {
 	})
 	
 }
+
+const next = () => {
+
+	nextButton.addEventListener('click', function(){
+
+		reset()
+		displayQuestion()
+
+	})
+}
+
 
 
 
