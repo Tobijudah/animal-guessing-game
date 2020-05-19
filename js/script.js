@@ -1,7 +1,7 @@
 let score,
  	 answer,
  	 chances,
- 	 currentQuestion,
+ 	 currentQuestion;
 	  
 const question = document.querySelector("#question"),
 		counter = document.querySelector("#counter"),
@@ -15,35 +15,35 @@ const question = document.querySelector("#question"),
 const database = [
 	{
 		question: "what is a meow sounder",
-		answer: "t",
+		answer: "q",
 	},
 	{
 		question: "what is a bark sounder",
-		answer: "cat",
+		answer: "w",
 	},
 	{
 		question: "what is a mooo sounder",
-		answer: "cat",
+		answer: "e",
 	},
 	{
 		question: "what is a hiss sounder",
-		answer: "cat",
+		answer: "r",
 	},
 	{
 		question: "what is a bleat sounder",
-		answer: "cat",
+		answer: "t",
 	},
 	{
 		question: "what is a neigh sounder",
-		answer: "cat",
+		answer: "y",
 	},
 	{
 		question: "what is a oink sounder",
-		answer: "cat",
+		answer: "u",
 	},
 	{
 		question: "what is a cry sounder",
-		answer: "cat",
+		answer: "i",
 	},
 ];
 
@@ -76,7 +76,6 @@ const checkAnswer = () => {
 			scoreDisplay.textContent = score
 			// input.setAttribute.disabled = 'true'
 			answeredCorrect = true
-			currentQuestion ++
 		} 
 		
 		else {
@@ -107,6 +106,7 @@ const next = () => {
 	nextButton.addEventListener('click', function(){
 
 		reset()
+		currentQuestion++
 		displayQuestion()
 
 	})
