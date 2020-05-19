@@ -65,15 +65,6 @@ const checkAnswer = () => {
 
 	submitButton.addEventListener('click', function(){
 
-		if (chances === 0) {
-			input.disabled = true
-			showMessage(`You've run out of chances`, 'red')
-			submitButton.disabled = true
-			nextButton.disabled = false
-			score -= 1
-			scoreDisplay.textContent = score
-		}
-
 		if (input.value === answer){
 			input.classList.remove('bad')
 			input.classList.add('good')
@@ -87,11 +78,23 @@ const checkAnswer = () => {
 			answeredCorrect = true
 			currentQuestion ++
 		} 
+		
 		else {
-			showMessage(`${input.value} is wrong. Try again`, '#db1414')
-			input.classList.add('bad')
+
 			chances -= 1
-			setTimeout(clearError, 3000)
+
+			if (chances === 0) {
+				input.disabled = true
+				showMessage(`You've run out of chances, the answer is ${answer}`, 'red')
+				submitButton.disabled = true
+				nextButton.disabled = false
+				score -= 1
+				scoreDisplay.textContent = score
+			} else {
+				showMessage(`${input.value} is wrong. Try again`, '#db1414')
+				input.classList.add('bad')
+				setTimeout(clearError, 2000)
+			}
 		}
 
 	})
@@ -121,12 +124,12 @@ const clearError = () => {
 }
 
 const reset = () => {
-	message.textContent = ''
 	nextButton.disabled = true
 	submitButton.disabled = false
+	input.disabled = false
 	input.classList.remove('good')
 	input.value = ''
-	input.disabled = false
+	message.textContent = ''
 }
 
 init();
