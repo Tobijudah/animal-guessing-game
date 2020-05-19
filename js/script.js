@@ -2,7 +2,6 @@ let score,
  	 answer,
  	 chances,
  	 currentQuestion,
-	  answeredCorrect;
 	  
 const question = document.querySelector("#question"),
 		counter = document.querySelector("#counter"),
@@ -10,7 +9,8 @@ const question = document.querySelector("#question"),
 		submitButton = document.querySelector("#submit"),
 		nextButton = document.querySelector("#next"),
 		scoreDisplay = document.querySelector("#score"),
-		input = document.querySelector('#input');
+		input = document.querySelector('#input'),
+		guessDisplay = document.querySelector('#guesses');
 
 const database = [
 	{
@@ -82,6 +82,7 @@ const checkAnswer = () => {
 		else {
 
 			chances -= 1
+			guessDisplay.textContent = chances
 
 			if (chances === 0) {
 				input.disabled = true
@@ -130,6 +131,8 @@ const reset = () => {
 	input.classList.remove('good')
 	input.value = ''
 	message.textContent = ''
+	chances = 3
+	guessDisplay.textContent = chances
 }
 
 init();
