@@ -7,19 +7,18 @@
 
 html, body {
    height: 100%;
+   display: grid;
    background: #232323;
    color: #fbfbfb;
+   background: url('/Untitled\ \(2\).png');
+   background-size: cover;
 }
 
 h1 {
    font-size: 3rem;
    line-height: 3rem;
    color: #dbd824;
-}
-
-
-a {
-   text-decoration: none;
+   font-weight: 900;
 }
 
 button, .btn {
@@ -27,7 +26,7 @@ button, .btn {
    display: inline-block;
 	height: 2.25rem;
    padding: 10px 20px;
-   margin-top: 0.75rem;
+   margin-top: 1.5rem;
    line-height: 1rem;
 	border: 0;
 	border-radius: 0.3rem;
@@ -36,6 +35,7 @@ button, .btn {
    font-weight: 700;
 	font-size: 15px;
    text-align: center;
+   text-decoration: none;
 }
 
 button:disabled{
@@ -43,10 +43,28 @@ button:disabled{
    background: #009632d7;
 }
 
+p {
+   margin: 0.5rem;
+}
+
 .container {
    width: 70%;
-   margin: 3rem auto;
+   margin: auto;
    text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.header {
+   margin: 3rem 0;
+}
+
+.instructions {
+   width: 70%;
+   margin: 0 auto;
+   padding-bottom: 3rem;
 }
 
 .good {
@@ -55,4 +73,10 @@ button:disabled{
 
 .bad {
    border: 2px solid #db1414;
+}
+
+@media(min-width:600px){
+   .container {
+      height: min-content;
+   }
 }
