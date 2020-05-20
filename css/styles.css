@@ -2,31 +2,38 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
 }
 
 html, body {
    height: 100%;
-   font-family: 'Poppins', sans-serif;
+   background: #232323;
+   color: #fbfbfb;
 }
 
 h1 {
-   font-size: 4rem;
+   font-size: 3rem;
+   line-height: 3rem;
+   color: #dbd824;
 }
+
 
 a {
    text-decoration: none;
 }
 
-button {
+button, .btn {
    cursor: pointer;
    display: inline-block;
 	height: 2.25rem;
    padding: 10px 20px;
    margin-top: 0.75rem;
+   line-height: 1rem;
 	border: 0;
 	border-radius: 0.3rem;
-	background: #009632;
-	color: white;
+   background: #dbd824;
+   color: #232323;
+   font-weight: 700;
 	font-size: 15px;
    text-align: center;
 }
