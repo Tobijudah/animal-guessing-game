@@ -17,7 +17,7 @@ html, body {
 h1 {
    font-size: 3rem;
    line-height: 3rem;
-   color: #dbd824;
+   color: #dbcf24;
    font-weight: 900;
 }
 
@@ -35,7 +35,7 @@ button, .btn {
    line-height: 1rem;
 	border: 0;
 	border-radius: 0.3rem;
-   background: #dbd824;
+   background: #dbcf24;
    color: #232323;
    font-weight: 700;
 	font-size: 15px;
