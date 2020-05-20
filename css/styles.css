@@ -10,20 +10,27 @@ html, body {
    display: grid;
    background: #232323;
    color: #fbfbfb;
-   background: url('/Untitled\ \(2\).png');
+   background: url('/imgs/background.png');
    background-size: cover;
+   background-position: center;
+   font-weight: 500;
 }
 
 h1 {
-   font-size: 3rem;
+   font-size: 3.25rem;
    line-height: 3rem;
    color: #dbcf24;
    font-weight: 900;
 }
 
 h3 {
-   font-weight: 900;
+   font-weight: 700;
    font-size: 1.6rem;
+}
+
+p {
+   margin: 0.5rem;
+   font-size: 1.1rem;
 }
 
 button, .btn {
@@ -31,7 +38,7 @@ button, .btn {
    display: inline-block;
 	height: 2.25rem;
    padding: 10px 20px;
-   margin-top: 1.5rem;
+   margin-top: 1rem;
    line-height: 1rem;
 	border: 0;
 	border-radius: 0.3rem;
@@ -46,12 +53,6 @@ button, .btn {
 button:disabled{
    cursor: not-allowed;
    background: #009632d7;
-}
-
-p {
-   margin: 0.5rem;
-   font-weight: 700;
-   font-size: 1.1rem;
 }
 
 .container {
@@ -69,7 +70,7 @@ p {
 }
 
 .instructions {
-   width: 70%;
+   width: 72%;
    margin: 0 auto;
    padding-bottom: 3rem;
 }
@@ -82,8 +83,3 @@ p {
    border: 2px solid #db1414;
 }
 
-@media(min-width:600px){
-   .container {
-      height: min-content;
-   }
-}
