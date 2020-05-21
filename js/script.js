@@ -130,6 +130,7 @@ const next = () => {
 
 		if (currentQuestion === (database.length - 1)){
 			localStorage.setItem('finalScore', score)
+			reset()
 			return window.location.href = "results.html"	 
 		}
 
