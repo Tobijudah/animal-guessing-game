@@ -14,35 +14,35 @@ const question = document.querySelector("#question"),
 
 const database = [
 	{
-		question: "What animal is the tallest",
+		question: "What animal is the tallest?",
 		answer: "girrafe",
 	},	
 	{
-		question: "What animal's baby is called a 'joey'",
+		question: "What animal's baby is called a 'joey'?",
 		answer: "kangaroo",
 	},
 	{
-		question: "What animal is the fastest on land",
+		question: "What animal is the fastest on land?",
 		answer: "cheetah",
 	},
 	{
-		question: "What animal can sleep for 3 years",
+		question: "What animal can sleep for 3 years?",
 		answer: "snail",
 	},
 	{
-		question: "What animal's group name is 'Crash'",
+		question: "What animal's group name is 'Crash'?",
 		answer: "rhinoceros",
 	},
 	{
-		question: "What animal makes a neighing sound",
+		question: "What animal makes a neighing sound?",
 		answer: "horse",
 	},
 	{
-		question: "What animal is the only flying mammal",
+		question: "What animal is the only flying mammal?",
 		answer: "bat",
 	},
 	{
-		question: "What animal has teeth in its stomach",
+		question: "What animal has teeth in its stomach?",
 		answer: "lobster",
 	},
 ];
