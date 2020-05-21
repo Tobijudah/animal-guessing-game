@@ -14,36 +14,36 @@ const question = document.querySelector("#question"),
 
 const database = [
 	{
-		question: "what is a meow sounder",
-		answer: "cat",
+		question: "What animal is the tallest",
+		answer: "girrafe",
+	},	
+	{
+		question: "What animal's baby is called a 'joey'",
+		answer: "kangaroo",
 	},
 	{
-		question: "what is a bark sounder",
-		answer: "dog",
+		question: "What animal is the fastest on land",
+		answer: "cheetah",
 	},
 	{
-		question: "what is a mooo sounder",
-		answer: "cow",
+		question: "What animal can sleep for 3 years",
+		answer: "snail",
 	},
 	{
-		question: "what is a hiss sounder",
-		answer: "snake",
+		question: "What animal's group name is 'Crash'",
+		answer: " rhinoceros",
 	},
 	{
-		question: "what is a bleat sounder",
-		answer: "goat",
-	},
-	{
-		question: "what is a neigh sounder",
+		question: "What animal makes a neighing sound",
 		answer: "horse",
 	},
 	{
-		question: "what is a oink sounder",
+		question: "What animal is the only flying mamal",
 		answer: "pig",
 	},
 	{
-		question: "what is a cry sounder",
-		answer: "baby",
+		question: "What animal has teeth in its stomach",
+		answer: "lobster",
 	},
 ];
 
