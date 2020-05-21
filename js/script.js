@@ -38,8 +38,8 @@ const database = [
 		answer: "horse",
 	},
 	{
-		question: "What animal is the only flying mamal",
-		answer: "pig",
+		question: "What animal is the only flying mammal",
+		answer: "bat",
 	},
 	{
 		question: "What animal has teeth in its stomach",
