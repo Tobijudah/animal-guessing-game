@@ -31,7 +31,7 @@ const database = [
 	},
 	{
 		question: "What animal's group name is 'Crash'",
-		answer: " rhinoceros",
+		answer: "rhinoceros",
 	},
 	{
 		question: "What animal makes a neighing sound",
