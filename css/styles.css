@@ -134,6 +134,30 @@ input:focus {
    border: 2px solid #db1414;
 }
 
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+   margin-bottom: 0.5rem;
+}
+
+.footer .social {
+	padding-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.fa-lg {
+   color: #dbcf24;
+}
+
+.fa-lg:hover {
+  color: #91891efd;
+}
+
+
+
 @media(max-width: 850px){
    .instructions {
       width: 100%;
