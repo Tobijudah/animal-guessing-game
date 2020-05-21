@@ -113,7 +113,7 @@ input:focus {
    margin: 0 0.6rem;
 }
 
-#board span {
+#board span, #final-score {
    background: #dbcf24;
    color: #141414;
    padding: 0 0.3rem;
