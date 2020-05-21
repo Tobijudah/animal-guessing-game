@@ -1,7 +1,7 @@
 let score,
  	 answer,
  	 chances,
- 	 currentQuestion;
+	  currentQuestion;
 	  
 const question = document.querySelector("#question"),
 		counter = document.querySelector("#counter"),
@@ -15,35 +15,35 @@ const question = document.querySelector("#question"),
 const database = [
 	{
 		question: "what is a meow sounder",
-		answer: "q",
+		answer: "cat",
 	},
 	{
 		question: "what is a bark sounder",
-		answer: "w",
+		answer: "dog",
 	},
 	{
 		question: "what is a mooo sounder",
-		answer: "e",
+		answer: "cow",
 	},
 	{
 		question: "what is a hiss sounder",
-		answer: "r",
+		answer: "snake",
 	},
 	{
 		question: "what is a bleat sounder",
-		answer: "t",
+		answer: "goat",
 	},
 	{
 		question: "what is a neigh sounder",
-		answer: "y",
+		answer: "horse",
 	},
 	{
 		question: "what is a oink sounder",
-		answer: "u",
+		answer: "pig",
 	},
 	{
 		question: "what is a cry sounder",
-		answer: "i",
+		answer: "baby",
 	},
 ];
 
@@ -64,6 +64,18 @@ const displayQuestion = () => {
 const checkAnswer = () => {
 
 	submitButton.addEventListener('click', function(){
+
+		if (!input.value){
+			showMessage('Please enter a value', 'red')
+			setTimeout(clearError, 2500)
+			return
+		}
+
+		if (typeof (input.value) == "number"){
+			showMessage('Numbers are invalid', 'red')
+			setTimeout(clearError, 2500)
+			return
+		}
 
 		if (input.value === answer){
 			input.classList.remove('bad')
@@ -90,10 +102,12 @@ const checkAnswer = () => {
 				nextButton.disabled = false
 				score -= 1
 				scoreDisplay.textContent = score
-			} else {
+			} 
+			else {
 				showMessage(`${input.value} is wrong. Try again`, '#db1414')
 				input.classList.add('bad')
-				setTimeout(clearError, 2000)
+				submitButton.disabled = true
+				setTimeout(clearError, 2500)
 			}
 		}
 
@@ -105,9 +119,19 @@ const next = () => {
 
 	nextButton.addEventListener('click', function(){
 
+		if (currentQuestion === (database.length - 1)){
+			localStorage.setItem('finalScore', score)
+			return window.location.href = "results.html"	 
+		}
+
+		if (currentQuestion === (database.length - 2)){
+			nextButton.textContent = 'Finish'
+		}
+
 		reset()
 		currentQuestion++
 		displayQuestion()
+		counter.textContent = currentQuestion + 1
 
 	})
 }
@@ -122,6 +146,7 @@ const clearError = () => {
 	message.textContent = ''
 	input.classList.remove('bad')
 	input.value = ''
+	submitButton.disabled = false
 }
 
 const reset = () => {
@@ -134,5 +159,6 @@ const reset = () => {
 	chances = 3
 	guessDisplay.textContent = chances
 }
+
 
 init();
