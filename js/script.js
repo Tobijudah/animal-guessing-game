@@ -64,55 +64,64 @@ const displayQuestion = () => {
 const checkAnswer = () => {
 
 	submitButton.addEventListener('click', function(){
+		checkInput()
+	})
 
-		if (!input.value){
-			showMessage('Please enter a value', 'red')
-			setTimeout(clearError, 2500)
-			return
+	document.querySelector('.container').addEventListener('keypress', function(e){
+		if (e.keyCode == 13){
+			checkInput()
 		}
-
-		if (typeof (input.value) == "number"){
-			showMessage('Numbers are invalid', 'red')
-			setTimeout(clearError, 2500)
-			return
-		}
-
-		if (input.value === answer){
-			input.classList.remove('bad')
-			input.classList.add('good')
-			input.disabled = true
-			showMessage(`${answer} is correct. Well-done!`, 'green')
-			submitButton.disabled = true
-			nextButton.disabled = false
-			score += 5
-			scoreDisplay.textContent = score
-			// input.setAttribute.disabled = 'true'
-			answeredCorrect = true
-		} 
-		
-		else {
-
-			chances -= 1
-			guessDisplay.textContent = chances
-
-			if (chances === 0) {
-				input.disabled = true
-				showMessage(`You've run out of chances, the answer is ${answer}`, 'red')
-				submitButton.disabled = true
-				nextButton.disabled = false
-				score -= 1
-				scoreDisplay.textContent = score
-			} 
-			else {
-				showMessage(`${input.value} is wrong. Try again`, '#db1414')
-				input.classList.add('bad')
-				submitButton.disabled = true
-				setTimeout(clearError, 2500)
-			}
-		}
-
 	})
 	
+}
+
+const checkInput = () => {
+	
+	if (!input.value){
+		showMessage('Please enter a value', 'red')
+		setTimeout(clearError, 2500)
+		return
+	}
+
+	if (typeof (input.value) == "number"){
+		showMessage('Numbers are invalid', 'red')
+		setTimeout(clearError, 2500)
+		return
+	}
+
+	if (input.value.toLowerCase() === answer){
+		input.classList.remove('bad')
+		input.classList.add('good')
+		input.disabled = true
+		showMessage(`${answer} is correct. Well-done!`, 'green')
+		submitButton.disabled = true
+		nextButton.disabled = false
+		score += 5
+		scoreDisplay.textContent = score
+		// input.setAttribute.disabled = 'true'
+		answeredCorrect = true
+	} 
+	
+	else {
+
+		chances -= 1
+		guessDisplay.textContent = chances
+
+		if (chances === 0) {
+			input.disabled = true
+			showMessage(`You've run out of chances, the answer is ${answer}`, 'red')
+			submitButton.disabled = true
+			nextButton.disabled = false
+			score -= 1
+			scoreDisplay.textContent = score
+		} 
+		else {
+			showMessage(`${input.value} is wrong. Try again`, '#db1414')
+			input.classList.add('bad')
+			submitButton.disabled = true
+			setTimeout(clearError, 2500)
+		}
+	}
 }
 
 const next = () => {
