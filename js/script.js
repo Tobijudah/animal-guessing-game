@@ -15,7 +15,7 @@ const question = document.querySelector("#question"),
 const database = [
 	{
 		question: "What animal is the tallest?",
-		answer: "girrafe",
+		answer: "giraffe",
 	},	
 	{
 		question: "What animal's baby is called a 'joey'?",
